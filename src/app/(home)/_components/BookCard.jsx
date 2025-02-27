@@ -1,11 +1,8 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Drawer,
-  DrawerClose,
   DrawerContent,
   DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -17,6 +14,7 @@ export default function BookCard({ item, index }) {
   const handleRecommendClick = async (bookTitle) => {
     try {
       const response = await fetch("https://book-recommendation-tb82.onrender.com//api/recommend", {
+      // const response = await fetch("http://127.0.0.1:5000/api/recommend",{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
